@@ -1,0 +1,10 @@
+site_name: HyDAMO Validation rules
+theme:
+  name: "material"
+  language: en
+plugins:
+  - search
+nav:
+    - Home: index.md
+    - Guides:
+        - Edit Rules: guides/edit_rules.md
