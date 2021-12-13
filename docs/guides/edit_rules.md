@@ -9,14 +9,32 @@ Below we explain how you can edit ValidationRules with two packages that support
 * Altova XMLSpy
 * JSON Editor Online
 
-![](images/altova_text.png "Altova Text-view")
-![](images/altova_grid.png "Altova Grid-view")
-
 ## Altova XMLSpy
 For this you need a license to and a copy of [Altova XMLSpy] https://www.altova.com/xmlspy-xml-editor
 
+The adantage of Altova XMLSpy: a text (top-image) and grid (bottom-image) view. The latter allows quick editting.
+![](images/altova_text.png "Altova Text-view")
+![](images/altova_grid.png "Altova Grid-view")
+
 ### Assign schema
 
-## Edit Online
+1. Go to `Info` -> `JSON` -> and specify your JSON-schema with `Select JSON Schema`
+2. Start editting. If you save you'll see if your ValidationRules.json is valid.
 
-have your own [JSON Editor Online](https://jsoneditoronline.org)
+![](images/altova_assign_schema.png "assign schema")
+
+## Edit Online
+Simply browse the website: [JSON Editor Online](https://jsoneditoronline.org)
+
+The adantage of JSON Editor Online: it's free!
+
+![](images/jsoneditonline_startup.png "JSON Editor Online startup")
+
+### Assign schema
+
+1. Open your ValidationRules.json left: `open` -> `from disk`
+2. Open your JSON-schema right: `open` -> `from disk`
+3. Assign your JSON schema to ValidationRules: `Settings` -> `JSON-schema` -> `Document` -> select your rules-document
+4. Start editing
+
+![](images/jsoneditoronline_assign_schema.png "assign schema")
