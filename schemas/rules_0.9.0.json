@@ -9,12 +9,9 @@
 			]
 		},
 		"hydamo_version": {
-			"type": [
+			"type":
 				"string",
-				"number"
-			],
 			"enum": [
-				2.2,
 				"2.2"
 			]
 		},
