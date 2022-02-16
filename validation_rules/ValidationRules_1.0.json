@@ -647,8 +647,8 @@
 					}
 				},
 				{
-					"id": 5,
-					"order": 5,
+					"id": 4,
+					"order": 4,
 					"result_variable": "kunstwerkopening_regelmiddel_soortregelmiddel",
 					"function": {
 						"object_relation": {
@@ -659,8 +659,8 @@
 					}
 				},
 				{
-					"id": 6,
-					"order": 6,
+					"id": 5,
+					"order": 5,
 					"result_variable": "kunstwerkopening_laagstedoorstroomhoogte",
 					"function": {
 						"object_relation": {
@@ -671,8 +671,8 @@
 					}
 				},
 				{
-					"id": 8,
-					"order": 8,
+					"id": 6,
+					"order": 6,
 					"result_variable": "kunstwerkopening_regelmiddel_aantal_regelmiddelen",
 					"function": {
 						"object_relation": {
