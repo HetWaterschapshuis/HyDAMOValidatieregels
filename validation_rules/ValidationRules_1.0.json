@@ -384,7 +384,55 @@
 							"right": "kunstwerkopening_hoogte_m"
 						}
 					}
-				}
+				},
+				{
+					"id": 6,
+					"name": "De minimale hoogte van een overlaat zou hoger moeten zijn dan de laagstedoorstroomhoogte van de kunstwerkopening",
+					"type": "logic",
+					"validation_rule_set": "basic",
+					"error_type": "critical",
+					"result_variable": "minimalehoogteoverlaat_plausibel",
+					"error_message": "minimalehoogteoverlaat niet plausibel",
+					"active": true,
+					"filter": {
+						"ISIN": {
+							"parameter": "overlaatonderlaat",
+							"array": [
+								"overlaat"
+							]
+						}
+					},
+					"function": {
+						"GE": {
+							"left": "minimalehoogtebovenkant",
+							"right": "kunstwerkopening_laagstedoorstroomhoogte"
+						}
+				   }
+			   },
+			   {
+					"id": 7,
+					"name": "De maximale hoogte van een overlaat zou lager moeten zijn dan de hoogstedoorstroomhoogte van de kunstwerkopening",
+					"type": "logic",
+					"validation_rule_set": "basic",
+					"error_type": "critical",
+					"result_variable": "maximalehoogteoverlaat_plausibel",
+					"error_message": "maximalehoogteoverlaat niet plausibel",
+					"active": true,
+					"filter": {
+						"ISIN": {
+							"parameter": "overlaatonderlaat",
+							"array": [
+								"overlaat"
+							]
+						}
+					},
+					"function": {
+						"LE": {
+							"left": "maximalehoogtebovenkant",
+							"right": "kunstwerkopening_hoogstedoorstroomhoogte"
+						}
+					}
+			    }
 			]
 		},
 		{
@@ -396,7 +444,7 @@
 					"result_variable": "regelmiddel_minimalehoogtebovenkant",
 					"function": {
 						"object_relation": {
-							"statistic": "max",
+							"statistic": "min",
 							"related_object": "regelmiddel",
 							"related_parameter": "minimalehoogtebovenkant"
 						}
@@ -599,18 +647,6 @@
 					}
 				},
 				{
-					"id": 4,
-					"order": 4,
-					"result_variable": "kunstwerkopening_regelmiddel_minimalehoogtebovenkant",
-					"function": {
-						"object_relation": {
-							"statistic": "min",
-							"related_object": "kunstwerkopening",
-							"related_parameter": "regelmiddel_minimalehoogtebovenkant"
-						}
-					}
-				},
-				{
 					"id": 5,
 					"order": 5,
 					"result_variable": "kunstwerkopening_regelmiddel_soortregelmiddel",
@@ -631,18 +667,6 @@
 							"statistic": "min",
 							"related_object": "kunstwerkopening",
 							"related_parameter": "laagstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 7,
-					"order": 7,
-					"result_variable": "kunstwerkopening_regelmiddel_minimalehoogtebovenkant",
-					"function": {
-						"object_relation": {
-							"statistic": "max",
-							"related_object": "kunstwerkopening",
-							"related_parameter": "regelmiddel_minimalehoogtebovenkant"
 						}
 					}
 				},
@@ -777,78 +801,6 @@
 				},
 				{
 					"id": 7,
-					"name": "De minimale hoogte van de onderkant van een schuif als onderlaat zal hoger of gelijk zijn aan de hoogste doorstroomhoogte",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "min_hoogte_onderkant_ge_hoogste_doorstroomhoogte",
-					"error_message": "hoogte_onderkant < hoogste_doorstroomhoogte",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "kunstwerkopening_regelmiddel_soortregelmiddel",
-							"array": [
-								"schuif"
-							]
-						}
-					},
-					"function": {
-						"GE": {
-							"left": "kunstwerkopening_regelmiddel_minimalehoogtebovenkant",
-							"right": "kunstwerkopening_hoogstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 8,
-					"name": "De maximale hoogte van een stuwklep zal lager of gelijk zijn aan de hoogste doorstroomhoogte",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "max_hoogtebov_le_hoogste_doorstroomhoogte",
-					"error_message": "maximalehoogtebovenkant > hoogste_doorstroomhoogte",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "kunstwerkopening_regelmiddel_soortregelmiddel",
-							"array": [
-								"stuwklep"
-							]
-						}
-					},
-					"function": {
-						"LE": {
-							"left": "kunstwerkopening_regelmiddel_maximalehoogtebovenkant",
-							"right": "kunstwerkopening_hoogstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 9,
-					"name": "De minimale hoogte van een stuwklep zal hoger of gelijk zijn aan de laagste doorstroomhoogte",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "min_hoogtebov_ge_hoogste_doorstroomhoogte",
-					"error_message": "minimalehoogtebovenkant < hoogste_doorstroomhoogte",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "kunstwerkopening_regelmiddel_soortregelmiddel",
-							"array": [
-								"stuwklep"
-							]
-						}
-					},
-					"function": {
-						"GE": {
-							"left": "kunstwerkopening_regelmiddel_minimalehoogtebovenkant",
-							"right": "kunstwerkopening_hoogstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 10,
 					"name": "Een regelbare stuw heeft minimaal 1 kunstwerkopening waaraan een regelmiddel is gekoppeld",
 					"type": "logic",
 					"validation_rule_set": "basic",
