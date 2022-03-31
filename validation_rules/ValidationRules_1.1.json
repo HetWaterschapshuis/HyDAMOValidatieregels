@@ -988,10 +988,10 @@
 				},
 				{
 					"id": 2,
-					"name": "lengte plausibel (1m - 10m)",
+					"name": "lengte plausibel (1m - 30m)",
 					"type": "logic",
 					"validation_rule_set": "basic",
-					"error_type": "critical",
+					"error_type": "non-critical",
 					"result_variable": "lengte_plausibel",
 					"error_message": "lengte niet plausibel",
 					"active": true,
@@ -999,7 +999,7 @@
 						"BE": {
 							"parameter": "lengte",
 							"min": 1,
-							"max": 10,
+							"max": 30,
 							"inclusive": false
 						}
 					}
@@ -1266,7 +1266,7 @@
 				{
 					"id": 0,
 					"order": 0,
-					"result_variable": "pompcapaciteit_m3s",
+					"result_variable": "pomp_pompcapaciteit_m3min",
 					"function": {
 						"join_parameter": {
 							"join_object": "pomp",
@@ -1278,10 +1278,10 @@
 				{
 					"id": 1,
 					"order": 1,
-					"result_variable": "pompcapaciteit_m3min",
+					"result_variable": "pomp_pompcapaciteit_m3s",
 					"function": {
 						"divide": {
-							"left": "pompcapaciteit_m3s",
+							"left": "pompcapaciteit_m3min",
 							"right": 60
 						}
 					}
@@ -1419,7 +1419,7 @@
 					"function": {
 						"LE": {
 							"left": "vastewaarde",
-							"right": "pompcapaciteit_m3min"
+							"right": "pomp_pompcapaciteit_m3s"
 						}
 					}
 				},
