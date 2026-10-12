@@ -618,33 +618,33 @@
 			"general_rules": [
 				{
 					"id": 1,
-					"result_variable": "kunstwerkopening_laagstedoorstroomhoogte",
+					"result_variable": "doorstroomopening_laagstedoorstroomhoogte",
 					"function": {
 						"object_relation": {
 							"statistic": "min",
-							"related_object": "kunstwerkopening",
+							"related_object": "doorstroomopening",
 							"related_parameter": "laagstedoorstroomhoogte"
 						}
 					}
 				},
 				{
 					"id": 2,
-					"result_variable": "kunstwerkopening_laagstedoorstroombreedte",
+					"result_variable": "doorstroomopening_laagstedoorstroombreedte",
 					"function": {
 						"object_relation": {
 							"statistic": "sum",
-							"related_object": "kunstwerkopening",
+							"related_object": "doorstroomopening",
 							"related_parameter": "laagstedoorstroombreedte"
 						}
 					}
 				},
 				{
 					"id": 3,
-					"result_variable": "kunstwerkopening_hoogstedoorstroombreedte",
+					"result_variable": "doorstroomopening_hoogstedoorstroombreedte",
 					"function": {
 						"object_relation": {
 							"statistic": "sum",
-							"related_object": "kunstwerkopening",
+							"related_object": "doorstroomopening",
 							"related_parameter": "hoogstedoorstroombreedte"
 						}
 					}
@@ -716,7 +716,7 @@
 					"active": true,
 					"function": {
 						"BE": {
-							"parameter": "kunstwerkopening_laagstedoorstroombreedte",
+							"parameter": "doorstroomopening_laagstedoorstroombreedte",
 							"min": 1,
 							"max": 50,
 							"inclusive": false
@@ -734,7 +734,7 @@
 					"active": true,
 					"function": {
 						"BE": {
-							"parameter": "kunstwerkopening_hoogstedoorstroombreedte",
+							"parameter": "doorstroomopening_hoogstedoorstroombreedte",
 							"min": 1,
 							"max": 50,
 							"inclusive": false
