@@ -1,33 +1,133 @@
+---
+hide:
+#- navigation
+- toc
+---
+
+
 # HyDAMO Validatietool
+
+## Welkom bij het handboek van de HyDAMO Validatietool
+
+Hier is alle informatie verzameld over het gebruik van de Validatietool.
 
 ![](../images/6a50725b-bb14-42d7-8dda-5217a1d3131b.png)
 
-### Er is een nieuwe versie va de Webclient en van de validatiemodule (met ondersteuning voor (Hy)DAMO 2.5) gelanceerd!
 
-### Bekijk de [Known issues en tips](03%20Known%20issues%20en%20tips.md).
+HyDAMO is een standaard met [DAMO](https://damo.hetwaterschapshuis.nl){ target="_blank" } als uitgangspunt voor het eenvoudige modelleren van het oppervlaktewatersysteem. De HyDAMO-validatietool ondersteunt een **circulair modelleerproces** waarin brongegevens continu worden gevalideerd, teruggekoppeld en verbeterd. Hierdoor groeit de kwaliteit en actualiteit van HyDAMO-data met iedere cyclus.
 
-# HyDAMO Validatietool
+Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende kernregistratiedata van waterschappen**, die eenvoudig kunnen worden ingezet in modelgeneratoren en andere toepassingen. Hoewel de tool primair is ontwikkeld voor waterschappen, is deze ook waardevol voor onder andere provincies, Rijkswaterstaat, kennisinstellingen en adviesbureaus die met hydrologsche data werken.
 
-Op deze Wiki treft u informatie aan over het gebruik van de HyDAMO Validatietool.
+![](../images/hydamo_cyclisch_modelleren.png){ .plaatje_met_margin }
 
-Heeft u vragen of opmerkingen over de Wiki, stuur dan een email naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
+# De Validatietool in een oogopslag
 
-Als gevolg van de digitalisering van processen neemt data een steeds belang­rijkere rol in bij het afwegen en nemen van beslissingen. De toegenomen databehoefte, de groei van de omvang van datasets en de continu veran­derende omgeving, vragen om een cyclisch modelleerproces, waarbij nieuw verkregen inzichten worden gebruikt om brondata te verbeteren. Met deze brondata kunnen modellen gegenereerd worden en/of bestaande modellen worden geactualiseerd. De HyDAMO Validatietool is een belangrijk schakel in dit cyclische modelleerproces en moet leiden tot een betere kwaliteit van de data. Door de HyDAMO Validatietool zo te ontwerpen dat deze op meerdere plekken in het modelleerproces kan worden toegepast (bij waterschappen, bij het GKW (GegevensKnooppunt Waterschappen) en bij het NHI), neemt de betrouwbaarheid en kwaliteit van invoerbestanden voor gebruik in modelgeneratoren toe.
+## Wat is de HyDAMO Validatietool?
 
-De HyDAMO Validatietool is in de basis een (online) webservice (validation as a service) waarmee databestanden kunnen worden gevalideerd. De HyDAMO Validatietool bestaat uit de volgende componenten:
+De HyDAMO Validatietool is in de basis een (online) webservice (validation as a service) waarmee databestanden kunnen worden gevalideerd. Hij bevat drie componenten:
 
-- Een HyDAMO Validatiemodule (ontwikkeld in Python) die de daadwerkelijke validatie van één of meerdere datasets uitvoert aan de hand van set validatieregels.
-- Een HyDAMO validatie-API waarmee:
+<div class="component-list" markdown="1">
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:simple-python:
+</div>
 
-  - validatietaken kunnen worden gedefinieerd;
-  - databestanden en validatieregels kunnen worden toegevoegd aan een validatietaak;
-  - een validatietaak kan worden gestart (die dan uitgevoerd wordt door de Python validatiemodule) en;
-  - een validatie resultaat kan worden gedownload.
-- Een HyDAMO validatie Webclient waarmee een gebruiker beschikt over een eenvoudige gra­fische interface waarmee de (verschillende functies van de) validatie-API bediend kunnen worden en (eenvoudige) analyses van validatieresultaten kunnen worden uitgevoerd.
+<div class="component-text" markdown="1">
+**Validatiemodule**
 
-De HyDAMO Validatietool is ontwikkeld door HKV lijn in water BV, D2Hydro en HydroConsult in opdracht van Het Waterschapshuis.
+ De [Validatiemodule](08%20HyDAMO%20Validatiemodule.md) is de binnenste schil en voert de daadwerkelijke validatie van de datasets door. Hij is ontwikkeld in Python en beschikaar als [openbare repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} en standalone [Python package](https://project/hydamo-validation/){:target="_blank"}.
+</div>
+</div>
 
-Voordat u aan de slag gaat met de HyDAMO Validatietool moet uw dataset voldoen aan het DAMO datamodel. Hiertoe heeft Het WaterschapsHuis een extra hulpmiddel ontwikkeld, de HyDAMO Wasmachine. Met de HyDAMO Wasmachine kunt u het verplichte attribuut NEN3610id toevoegen aan uw dataset, worden domeinen omgezet naar omschrijvingen en wordt het resultaat in het correcte Geopackage formaat weggeschreven. De HyDAMO Wasmachine staat hier: [HyDAMO Wasmachine op Github](https://github.com/HetWaterschapshuis/HyDAMOValidatieregels/tree/main/hydamo_wasmachine).
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:material-api: 
+</div>
+
+<div class="component-text" markdown="1">
+**Validatie-API**
+
+Met de [Validatie-API](07%20HyDAMO%20validatie-API.md) kun je validatietaken aanmaken, datasets en validatieregels toevoegen, een taak starten en de resultaten downloaden. De API maakt hiervoor gebruik van de rekenmodule.
+</div>
+</div>
+
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:material-monitor-screenshot:
+</div>
+
+<div class="component-text" markdown="1">
+**Validatie-Webclient**
+
+ De [Validatie-Webclient](https://validatietool.hydamo.nl/){:target="_blank"}: is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om de API graphisch te besturen. Daarnaast geeft de Webclient ook de mogelijkheid om invoerbestanden en rekenresultaten op de kaart of als tabel te bekijken. Om van de API en Webclient gebruik te kunnen maken is het nodig om een [gebruikersaccount](02%20Gebruikersregistratie.md) te hebben.
+</div>
+</div>
+</div>
+
+
+## Essentiele onderdelen van een validatie
+
+Verdere kernelementen in het validatieproces zijn:
+
+<div class="component-list" markdown="1">
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:fontawesome-solid-book-reader:
+</div>
+
+<div class="component-text" markdown="1">
+**Handboek**
+
+[Handboek](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek){:target="_blank"}: Het handboek is een openbare GitHub-repository waarvan deze Wikipedia onderdeel uitmaakt. Dit is de centrale opslagplaats voor relevante documentatie, referentiebestanden en voorbeelddatasets. Onder andere bevinden zich hier de officiele Validatieregelsets, de HyDAMO-datamodelschema's en de HyDAMO-wasmachine.
+</div>
+</div>
+
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:material-format-list-checks: 
+</div>
+
+<div class="component-text" markdown="1">
+**Validatieregels**
+
+Bij een validatie horen altijd [validatieregels](05%20Basis%20validatieregels.md) die aangeven op welke aspecten gecontroleerd moet worden. De regels worden in een apart JSON-bestand meegegeven en zijn beschikbaar op de openbare [GitHub-repository](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/versies_hydamomodel){:target="_blank"} van het handboek.
+</div>
+</div>
+
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:material-washing-machine:
+</div>
+
+<div class="component-text" markdown="1">
+**HyDAMO-wasmachine**
+
+[HyDAMO-wasmachine](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){:target="_blank"}: De Validatie tooling van HKV wil gegevens conform een vooraf afgesproken formaat. Het is afgesproken dat de invoerdatasets als GeoPackage worden aangeboden, objecten het veld NEN3610ID moeten bevatten en getal-domeinen als omschrijving worden omgezet. De HyDAMO-wasmachine is een FME-gebaseerde GUI die DAMO objecten omzet naar het benodigde formaat. 
+</div>
+</div>
+
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:fontawesome-solid-chart-diagram:
+</div>
+
+<div class="component-text" markdown="1">
+**HyDAMO-datamodel**
+
+In de validatieregels moet ook het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){:target="_blank"} van de gebruike dataset opgegeven worden onder de parameter 'hydamo_version'. In het HyDAMO-datamodel is vastgelegd welke object(-namen) toegestaan zijn en voor ieder object wat de attribuutdefinities zijn zoals: veldnaam, datatype, toegestane waarden, min- en max-lengte etc.. De HyDAMO-versies 
+volgen de jaarlijkse doorontwikkelingen van de HyDAMO-mappings binnen DAMO. 
+</div>
+</div>
+</div>
+
+
+
+* [HyDAMO-wasmachine](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){:target="_blank"}: De Validatie tooling van HKV wil gegevens conform een vooraf afgesproken formaat. Het is afgesproken dat de invoerdatasets als GeoPackage worden aangeboden, objecten het veld NEN3610ID moeten bevatten en getal-domeinen als omschrijving worden omgezet. De HyDAMO-wasmachine is een FME-gebaseerde GUI die DAMO objecten omzet naar het benodigde formaat. 
+* HyDAMO-datamodel: In de validatieregels moet ook het HyDAMO-datamodel van de gebruike dataset opgegeven worden onder de parameter 'hydamo_version'. In het HyDAMO-datamodel is vastgelegd welke object(-namen) toegestaan zijn en voor ieder object wat de attribuutdefinities zijn zoals: veldnaam, datatype, toegestane waarden, min- en max-lengte etc.. De HyDAMO-versies 
+volgen de jaarlijkse doorontwikkelingen van de HyDAMO-mappings binnen DAMO. 
+
+
+
 
 # Inhoud van deze wiki
 - [Gebruikersregistratie](02%20Gebruikersregistratie.md)

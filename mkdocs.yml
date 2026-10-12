@@ -5,9 +5,13 @@ repo_name: HetWaterschapshuis/HyDAMOValidatiehandboek
 
 theme:
   name: material
+  font:
+    text: Asap
+    code: Roboto Mono
   language: nl
   favicon: assets/favicon-hwh-logo-01.png
-  logo: assets/logo-het-waterschapshuis.png
+  logo: assets/favicon-hwh-logo-01.png
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.sections
@@ -16,6 +20,7 @@ theme:
     - search.suggest
     - content.code.copy
     - toc.follow
+    - navigation.footer
   palette:
     - scheme: default
       primary: blue
@@ -34,12 +39,21 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  generator: false
+
+copyright: Copyright &copy; 2026 het Waterschapshuis
+
 extra_css:
   - stylesheets/extra.css
 
 nav:
-  - Home:
-      - Aan de slag: "HyDAMO Validatietool/01 HyDAMO Validatietool.md"
+  - Home: "HyDAMO Validatietool/01 HyDAMO Validatietool.md"
+  - Aan de slag:
       - Gebruikersregistratie: "HyDAMO Validatietool/02 Gebruikersregistratie.md"
       - Known issues en tips: "HyDAMO Validatietool/03 Known issues en tips.md"
       - Versie overzicht: "HyDAMO Validatietool/04 Versie overzicht.md"

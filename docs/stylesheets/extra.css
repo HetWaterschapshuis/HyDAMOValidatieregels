@@ -31,6 +31,11 @@ body {
   background-color: var(--hwh-primary);
 }
 
+.md-header__topic:first-child {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   height: 2.2rem;
@@ -38,7 +43,7 @@ body {
 }
 
 .md-tabs {
-  border-top: 6px solid var(--hwh-accent);
+  border-top: 3px solid var(--hwh-accent);
 }
 
 .md-tabs__link--active,
@@ -57,11 +62,16 @@ body {
   color: rgb(51 51 51 / 0.75);
 }
 
-.md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
   color: var(--hwh-primary);
-  font-weight: 700;
+  font-weight: 400;
+}
+
+.md-typeset h1{
+  color: var(--hwh-primary);
+  font-weight: 400;
+  font-size: 2.5em;
 }
 
 .md-typeset .button,
@@ -113,4 +123,69 @@ body {
 .md-top {
   background-color: #ffffff;
   color: var(--hwh-primary);
+}
+
+.md-copyright {
+    display: flex;
+    align-items: center;      /* verticaal uitlijnen */
+    justify-content: center;  /* horizontaal centreren */
+    gap: 20px;                /* ruimte tussen logo en tekst */
+    text-align: left;
+}
+
+.footer_logo {
+    max-height: 50px;
+}
+
+.md-copyright a {
+    color: white;
+}
+
+.plaatje_met_margin {
+    margin-top: 50px ;
+    margin-bottom: 100px ;
+    max-width: 80% !important;
+}
+
+.md-typeset .twemoji {
+    --md-icon-size: 2em;
+    vertical-align: -0.3em;
+}
+
+.component {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin: 1.5rem 0;
+}
+
+.component-icon {
+    text-align: center;
+}
+
+.component-icon .twemoji {
+    --md-icon-size: 3em;
+}
+
+.component-text {
+    margin: 0;
+}
+
+.component-text p:first-child {
+    margin-top: 0;
+}
+
+.component-list {
+margin: 2rem 0;
+}
+ 
+.component:not(:last-child) {
+border-bottom: 1px solid var(--md-default-fg-color--lightest);
+padding-bottom: 1.5rem;
+}
+
+.component-list > .component:not(:last-of-type) {
+border-bottom: 1px solid var(--md-default-fg-color--lightest);
+padding-bottom: 1.5rem;
 }
