@@ -1066,7 +1066,7 @@
 					"active": true,
 					"filter": {
 						"ISIN": {
-							"parameter": "stuurvariabele",
+							"parameter": "typestuurvariabele",
 							"array": [
 								"pompdebiet"
 							]
@@ -1095,7 +1095,7 @@
 					},
 					"function": {
 						"ISIN": {
-							"parameter": "stuurvariabele",
+							"parameter": "typestuurvariabele",
 							"array": [
 								"pompdebiet"
 							]
