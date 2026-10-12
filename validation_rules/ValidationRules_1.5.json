@@ -1011,7 +1011,8 @@
 					"active": true,
 					"function": {
 						"consistent_period": {
-							"max_gap": 1
+							"max_gap": 1,
+							"groupers": ["pompid", "afsluitmiddelid"]
 						}
 					}
 				},
