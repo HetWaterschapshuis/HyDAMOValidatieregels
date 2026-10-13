@@ -1,18 +1,51 @@
 ---
 hide:
-#- navigation
+- navigation
 - toc
 ---
 
+<div class="landingpage" markdown="1">
+
+<div class="landing-banner" markdown="1">
+
+<div class="landing-banner-inner" markdown="1">
+
+<div class="landing-banner-text" markdown="1">
 
 # HyDAMO Validatietool
 
-## Welkom bij het handboek van de HyDAMO Validatietool
+Welkom bij het handboek van de HyDAMO Validatietool. Hier is alle informatie verzameld over het gebruik van de Validatietool voor een cyclisch modelleerproces.
 
-Hier is alle informatie verzameld over het gebruik van de Validatietool.
+<div class="ribbon-links" markdown="1">
 
-![](../images/6a50725b-bb14-42d7-8dda-5217a1d3131b.png)
+<div class="link-box" markdown="1">
+<a href="../Introductie tool/01 In een oogopslag">Introductie tool</a>
+</div>
 
+<div class="link-box" markdown="1">
+<a href="03 Validatieproces/">Aan de slag</a>
+</div>
+
+<div class="link-box" markdown="1">
+<a href="07 HyDAMO validatie-API/">API-documentatie</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="landing-banner-image" markdown="1">
+
+![](../images/6a50725b-bb14-42d7-8dda-5217a1d3131b_xsmall.png)
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="landing-content" markdown="1">
 
 HyDAMO is een standaard met [DAMO](https://damo.hetwaterschapshuis.nl){ target="_blank" } als uitgangspunt voor het eenvoudige modelleren van het oppervlaktewatersysteem. De HyDAMO-validatietool ondersteunt een **circulair modelleerproces** waarin brongegevens continu worden gevalideerd, teruggekoppeld en verbeterd. Hierdoor groeit de kwaliteit en actualiteit van HyDAMO-data met iedere cyclus.
 
@@ -20,122 +53,89 @@ Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende 
 
 ![](../images/hydamo_cyclisch_modelleren.png){ .plaatje_met_margin }
 
-# De Validatietool in een oogopslag
-
-## Wat is de HyDAMO Validatietool?
-
-De HyDAMO Validatietool is in de basis een (online) webservice (validation as a service) waarmee databestanden kunnen worden gevalideerd. Hij bevat drie componenten:
 
 <div class="component-list" markdown="1">
 <div class="component" markdown="1">
 <div class="component-icon" markdown="1">
-:simple-python:
+:material-eye:
 </div>
 
-<div class="component-text" markdown="1">
-**Validatiemodule**
+<div class="component-mini-text" markdown="1">
+**Overzicht**
 
- De [Validatiemodule](08%20HyDAMO%20Validatiemodule.md) is de binnenste schil en voert de daadwerkelijke validatie van de datasets door. Hij is ontwikkeld in Python en beschikaar als [openbare repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} en standalone [Python package](https://project/hydamo-validation/){:target="_blank"}.
-</div>
-</div>
-
-<div class="component" markdown="1">
-<div class="component-icon" markdown="1">
-:material-api: 
-</div>
-
-<div class="component-text" markdown="1">
-**Validatie-API**
-
-Met de [Validatie-API](07%20HyDAMO%20validatie-API.md) kun je validatietaken aanmaken, datasets en validatieregels toevoegen, een taak starten en de resultaten downloaden. De API maakt hiervoor gebruik van de rekenmodule.
+Ontdek de drie componentlagen van de validatietool en de essentiele onderdelen van een validatie onder [de validatietool in een oogopslag](HyDAMO%20validatie-API/01%20API%20definitie.md)
 </div>
 </div>
 
 <div class="component" markdown="1">
 <div class="component-icon" markdown="1">
-:material-monitor-screenshot:
+:material-account:
 </div>
 
 <div class="component-text" markdown="1">
-**Validatie-Webclient**
+**Gebruikersregistratie**
 
- De [Validatie-Webclient](https://validatietool.hydamo.nl/){:target="_blank"}: is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om de API graphisch te besturen. Daarnaast geeft de Webclient ook de mogelijkheid om invoerbestanden en rekenresultaten op de kaart of als tabel te bekijken. Om van de API en Webclient gebruik te kunnen maken is het nodig om een [gebruikersaccount](02%20Gebruikersregistratie.md) te hebben.
-</div>
-</div>
-</div>
-
-
-## Essentiele onderdelen van een validatie
-
-Verdere kernelementen in het validatieproces zijn:
-
-<div class="component-list" markdown="1">
-<div class="component" markdown="1">
-<div class="component-icon" markdown="1">
-:fontawesome-solid-book-reader:
-</div>
-
-<div class="component-text" markdown="1">
-**Handboek**
-
-[Handboek](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek){:target="_blank"}: Het handboek is een openbare GitHub-repository waarvan deze Wikipedia onderdeel uitmaakt. Dit is de centrale opslagplaats voor relevante documentatie, referentiebestanden en voorbeelddatasets. Onder andere bevinden zich hier de officiele Validatieregelsets, de HyDAMO-datamodelschema's en de HyDAMO-wasmachine.
+Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruikersaccount en wachtwoord](02%20Gebruikersregistratie.md) te hebben.
 </div>
 </div>
 
 <div class="component" markdown="1">
 <div class="component-icon" markdown="1">
-:material-format-list-checks: 
+:material-power-standby:
 </div>
 
 <div class="component-text" markdown="1">
-**Validatieregels**
+**Aan de slag**
 
-Bij een validatie horen altijd [validatieregels](05%20Basis%20validatieregels.md) die aangeven op welke aspecten gecontroleerd moet worden. De regels worden in een apart JSON-bestand meegegeven en zijn beschikbaar op de openbare [GitHub-repository](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/versies_hydamomodel){:target="_blank"} van het handboek.
+Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je de validatietool via de [Webclient](02%20Gebruikersregistratie.md) kan gebruiken, als [API](02%20Gebruikersregistratie.md) kan benaderen of als developer met het rekenhart als [Python-module](02%20Gebruikersregistratie.md) aan de slag kan.
 </div>
 </div>
 
 <div class="component" markdown="1">
 <div class="component-icon" markdown="1">
-:material-washing-machine:
+:material-calendar:
 </div>
 
 <div class="component-text" markdown="1">
-**HyDAMO-wasmachine**
+**Nieuws en evenementen**
 
-[HyDAMO-wasmachine](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){:target="_blank"}: De Validatie tooling van HKV wil gegevens conform een vooraf afgesproken formaat. Het is afgesproken dat de invoerdatasets als GeoPackage worden aangeboden, objecten het veld NEN3610ID moeten bevatten en getal-domeinen als omschrijving worden omgezet. De HyDAMO-wasmachine is een FME-gebaseerde GUI die DAMO objecten omzet naar het benodigde formaat. 
-</div>
-</div>
-
-<div class="component" markdown="1">
-<div class="component-icon" markdown="1">
-:fontawesome-solid-chart-diagram:
-</div>
-
-<div class="component-text" markdown="1">
-**HyDAMO-datamodel**
-
-In de validatieregels moet ook het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){:target="_blank"} van de gebruike dataset opgegeven worden onder de parameter 'hydamo_version'. In het HyDAMO-datamodel is vastgelegd welke object(-namen) toegestaan zijn en voor ieder object wat de attribuutdefinities zijn zoals: veldnaam, datatype, toegestane waarden, min- en max-lengte etc.. De HyDAMO-versies 
-volgen de jaarlijkse doorontwikkelingen van de HyDAMO-mappings binnen DAMO. 
+Vind hier [nieuws en evenementen](02%20Gebruikersregistratie.md) die je op de hoogte van ontwikklelingen rond HyDAMO en data-validatie houden. 
 </div>
 </div>
 </div>
 
 
 
-* [HyDAMO-wasmachine](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){:target="_blank"}: De Validatie tooling van HKV wil gegevens conform een vooraf afgesproken formaat. Het is afgesproken dat de invoerdatasets als GeoPackage worden aangeboden, objecten het veld NEN3610ID moeten bevatten en getal-domeinen als omschrijving worden omgezet. De HyDAMO-wasmachine is een FME-gebaseerde GUI die DAMO objecten omzet naar het benodigde formaat. 
-* HyDAMO-datamodel: In de validatieregels moet ook het HyDAMO-datamodel van de gebruike dataset opgegeven worden onder de parameter 'hydamo_version'. In het HyDAMO-datamodel is vastgelegd welke object(-namen) toegestaan zijn en voor ieder object wat de attribuutdefinities zijn zoals: veldnaam, datatype, toegestane waarden, min- en max-lengte etc.. De HyDAMO-versies 
-volgen de jaarlijkse doorontwikkelingen van de HyDAMO-mappings binnen DAMO. 
 
+##
+<div class="component-grid-3frames" markdown="1">
+<div class="component-mini-noframe-noicon" markdown="1">
 
+### Introductie tool
+- [De tool in een oogopslag](../Introductie%20tool/01%20In%20een%20oogopslag)
+- [Gebruikersregistratie](../Introductie%20tool/02%20Gebruikersregistratie)
+- [Known issues en tips](../Introductie%20tool/03%20Known%20Issues%20en%20tips)
+- [Versie overzicht](../Introductie%20tool/04%20Versie%20Overzicht)
 
+</div>
+<div class="component-mini-noframe-noicon" markdown="1">
 
-# Inhoud van deze wiki
-- [Gebruikersregistratie](02%20Gebruikersregistratie.md)
+### Aan de slag
+- [De Webclient](02%20Gebruikersregistratie.md)
+- [De API](02%20Gebruikersregistratie.md)
+- [De Rekenmodule](02%20Gebruikersregistratie.md)
+
+</div>
+<div class="component-mini-noframe-noicon" markdown="1">
+
+### Overzichten
+- [Validatieregels](04%20Versie%20overzicht.md)
 - [Known issues en tips](03%20Known%20issues%20en%20tips.md)
 - [Versie overzicht](04%20Versie%20overzicht.md)
-- [Basis validatieregels](05%20Basis%20validatieregels.md)
-- [HyDAMO validatie Webclient](06%20HyDAMO%20validatie%20Webclient.md)
-- [HyDAMO validatie-API](07%20HyDAMO%20validatie-API.md)
-- [HyDAMO Validatiemodule](08%20HyDAMO%20Validatiemodule.md)
-- [Mee-ontwikkelen](09%20Mee-ontwikkelen.md)
-- [Gebruikersmiddag HyDAMO Validatietool](10%20Gebruikersmiddag%20HyDAMO%20Validatietool.md)
+
+
+
+</div>
+</div>
+</div>
+</div>
