@@ -113,14 +113,14 @@ Vind hier [nieuws en evenementen](02%20Gebruikersregistratie.md) die je op de ho
 
 ### Introductie tool
 - [De tool in een oogopslag](../Introductie%20tool/01%20In%20een%20oogopslag)
-- [Gebruikersregistratie](../Introductie%20tool/02%20Gebruikersregistratie)
-- [Known issues en tips](../Introductie%20tool/03%20Known%20Issues%20en%20tips)
-- [Versie overzicht](../Introductie%20tool/04%20Versie%20Overzicht)
+- [Known issues en tips](../Introductie%20tool/02%20Known%20Issues%20en%20tips)
+- [Versie overzicht](../Introductie%20tool/03%20Versie%20Overzicht)
 
 </div>
 <div class="component-mini-noframe-noicon" markdown="1">
 
 ### Aan de slag
+- [Gebruikersregistratie](../Aan%20de%20slag/01%20Gebruikersregistratie)
 - [De Webclient](02%20Gebruikersregistratie.md)
 - [De API](02%20Gebruikersregistratie.md)
 - [De Rekenmodule](02%20Gebruikersregistratie.md)

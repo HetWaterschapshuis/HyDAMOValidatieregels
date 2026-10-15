@@ -55,11 +55,10 @@ nav:
   - Home: "HyDAMO Validatietool/01 HyDAMO Validatietool.md"
   - Introductie tool:
       - In een oogopslag: "HyDAMO Validatietool/Introductie tool/01 In een oogopslag.md"
-      - Gebruikersregistratie: "HyDAMO Validatietool/Introductie tool/02 Gebruikersregistratie.md"
-      - Known issues en tips: "HyDAMO Validatietool/Introductie tool/03 Known issues en tips.md"
-      - Versie overzicht: "HyDAMO Validatietool/Introductie tool/04 Versie overzicht.md"
+      - Known issues en tips: "HyDAMO Validatietool/Introductie tool/02 Known issues en tips.md"
+      - Versie overzicht: "HyDAMO Validatietool/Introductie tool/03 Versie overzicht.md"
   - Aan de slag:
-      - Gebruikersregistratie: "HyDAMO Validatietool/02 Gebruikersregistratie.md"
+      - Gebruikersregistratie: "HyDAMO Validatietool/Aan de slag/01 Gebruikersregistratie.md"
       - Known issues en tips: "HyDAMO Validatietool/03 Known issues en tips.md"
       - Versie overzicht: "HyDAMO Validatietool/04 Versie overzicht.md"
   - Validatieregels:
